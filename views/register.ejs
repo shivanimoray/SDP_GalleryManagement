@@ -1,0 +1,34 @@
+<% include partials/header %>
+<% include partials/navbar %>
+<div class="bg_background"></div>
+<div class="row">
+    <div class="col-md-3 col-xs-12 sign_up_card">
+        <div class="card register_card">
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                <h1 class="login_title text-center">SignUp</h1>
+                <div class="card-body scrollable_card">
+                    <div class="form-group">
+                        <input class="form-control" required="" name="firstname" placeholder="Firstname" novalidate>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" name="lastname" placeholder="Lastname" novalidate>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="username" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" type="password" name="confirmpassword" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <button class="btn btn-raised btn-success btn-block">SignUp</button>
+                <p class="text-center"><a href="/">Go Back</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+             
+                <% include partials/footer %>
+              
