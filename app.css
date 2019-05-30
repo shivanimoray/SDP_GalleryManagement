@@ -1,0 +1,19 @@
+.sign_up_card {
+	float: none;
+    margin: 5% auto;
+}
+
+.login_card {
+	background: #ffffff00;
+	float: none;
+  margin: 5% auto;
+  box-shadow: none;
+}
+
+.bg_background{
+	background-image: url(BackgroungImage.jpg);
+	position: absolute;
+	z-index: -2;
+	height: 100%;
+  width: 100%;
+}
