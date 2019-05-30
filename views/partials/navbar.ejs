@@ -1,0 +1,38 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/homepage">Be You</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Find Artists 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/homepage/Actor">Actors</a>
+                <a class="dropdown-item" href="/homepage/Model">Models</a>
+                <a class="dropdown-item" href="/homepage/Musician">Musician</a>
+                <a class="dropdown-item" href="/homepage">All</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= currentUser.username %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%if (currentUser.type == 'artist') { %>
+                  <a class="dropdown-item" href="/edit_profile/<%= currentUser.uid %>">Edit Profile</a>
+                <% } %>
+                <a class="dropdown-item" href="/logout">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+      

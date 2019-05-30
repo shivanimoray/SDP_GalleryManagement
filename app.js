@@ -41,9 +41,48 @@ app.get("/register", function (req, res) {
     res.render('register.ejs');
 });
 
-//Homepage routes
-var homepage = require('/homepage');
-res.render('/homepage', homepage)
+
+//Show all paintings and filter painting types on homepage
+app.get("/homepage", function (req, res) {
+  var type = req.params.painting;
+  UserDetail.find({}, function (err, paintings) {
+      if (err) {
+          console.log(err);
+      } else {
+          res.render('homepage', {
+            paintings: paintings
+          })
+      }
+  })
+})
+
+app.get("homepage/:painting", function (req, res) {
+  var type = req.params.painting;
+  UserDetail.find({ 'details.painting': type }, function (err, paintings) {
+      if (err) {
+          //req.flash('danger', 'Oops! Something went wrong, please try again. ')
+          console.log(err);
+      } else {
+          res.render('homepage', {
+            paintings: paintings,
+          })
+      }
+  })
+})
+
+//Get Details of painting
+app.get("/:_id", function (req, res) {
+  UserDetail.findById({ "_id": req.params._id }, function (err, paintings) {
+      if (err) {
+          //req.flash('danger', 'Oops! Something went wrong, please try again. ')
+          console.log(err)
+      } else {
+          res.render('profile', {
+              paintings: paintings
+          });
+      }
+  });
+});
 
 //Logout
 //app.get("/logout", function (req, res) {
@@ -66,7 +105,19 @@ res.render('/homepage', homepage)
    // })
 //})
 
-
+//app.get("/homepage/:artist", isLoggedIn, function (req, res) {
+ //   var type = req.params.artist;
+//    UserDetail.find({ 'details.artist': type }, function (err, artists) {
+ //       if (err) {
+ //           req.flash('danger', 'Oops! Something went wrong, please try again. ')
+  //          console.log(err);
+  //      } else {
+  //          res.render('homepage', {
+  //              artists: artists,
+  //          })
+  //      }
+  //  })
+//})
 
 
 
