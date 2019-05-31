@@ -13,113 +13,116 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-			<div class="card">
-				<div class="card-body">
-					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-                                <img class="d-block w-10" src="111.jpg" 
-                                     onerror="this.src='https://via.placeholder.com/450;'"
-								 alt="First slide">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-10" src="111.jpg" 
+                                            onerror="this.src='https://via.placeholder.com/450;'"
+                                            alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 	            </div>
 	            <div class="col align-self-center">
-                <div class="card">
-                    <div class="card-body">
+                    <div class="card">
+                        <div class="card-body">
                         
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Price</th>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Painting Name</th>
+                                            <td>
+                                                Pname
+                                            </td>
+                                    </tr> 
+                                    <tr>
+                                        <th scope="row">Description</th>
+                                            <td>
+                                                Acrylic, Oil on Canvas
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Artist Name</th>
+                                            <td>
+                                                    Artist Name
+                                            </td>
+                                    </tr>    
+                                    
+                                    <tr>
+                                        <th scope="row">Painting Year</th>
+                                        <td>
+                                            Painted Year
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Painting Type</th>
+                                        <td>
+                                                Painting Type
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cost</th>
                                         <td>
                                             1200$
                                         </td>
-                                </tr>    
-                                <tr>
-                                    <th scope="row">TECHNIQUE</th>
-                                    <td>
-                                        Acrylic, Oil on Canvas
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">DIMENSIONS</th>
-                                    <td>
-                                        70x50cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">FRAMING DETAILS</th>
-                                    <td>
-                                        Stretched canvas, Framing on request
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">SHIPPING</th>
-                                    <td>
-                                        Free of charge
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3>
-                            Andrew Sen
-                        </h3>
-                                              
-                        <p class="text-center">Artist's 2 line code like : I want to trigger emotional responses and 
-                                                narrate life stories in varied ways. 
-                        </p>
-                             
-                        
-                    </div>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Size</th>
+                                        <td>
+                                            70x30
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     
                     <a class="btn btn-secondary btn-raised profile-align" data-toggle="modal" data-target="#contactArtist">Buy Now</a>
-                    <div class="modal fade" id="contactArtist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-			 aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel" >
-                                Fill in the details, we will get back to you !!								
-							</h5>
-							<button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form action="/contact/<%= artists._id %>" method="POST">
-								<div class="form-group">
+                    <div class="modal fade" id="contactArtist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				        <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+						        <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLabel" >
+                                        Fill in the details, we will get back to you !!								
+							        </h5>
+							        <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+							        </button>
+						        </div>
+						        <div class="modal-body">
+							        <form action="/contact/" method="POST">
+								    <div class="form-group">
 									<label for="exampleInputEmail1">Email address</label>
 									<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
 									 placeholder="Enter email" />
 									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-								</div>
-								<div class="form-group">
+								    </div>
+								    <div class="form-group">
 									<label for="exampleInputEmail1">Firstname</label>
 									<input type="text" class="form-control" id="exampleInputEmail1" name="firstname" aria-describedby="emailHelp"
 									 placeholder="Enter Firstname" />
-								</div>
-								<div class="form-group">
+								    </div>
+								    <div class="form-group">
 									<label for="exampleInputEmail1">Lastname</label>
 									<input type="text" class="form-control" id="exampleInputEmail1" name="lastname" aria-describedby="emailHelp"
 									 placeholder="Enter Lastname" />
-								</div>
-								<div class="form-group">
+								    </div>
+								    <div class="form-group">
 									<label for="exampleFormControlTextarea1">Message</label>
 									<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" placeholder="Type message"></textarea>
-								</div>
-								<button type="Submit" class="btn btn-primary btn-raised">Send</button>
-							</form>
-						</div>
-					</div>
-				</div>
+								    </div>
+								    <button type="Submit" class="btn btn-primary btn-raised">Send</button>
+							        </form>
+						        </div>
+					        </div>
+				        </div>
+                    </div>
                 </div>
-                </div>
-                </div>  
-            </div>      
-        </div>
+            </div>  
+        </div>      
+        
     </body>
 </html>

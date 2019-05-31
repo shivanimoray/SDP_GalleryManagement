@@ -1,6 +1,6 @@
 .register_card {
 	float: none;
-    margin: 5% auto;
+  margin: 5% auto;
 }
 
 .login_card {
@@ -16,4 +16,16 @@
 	z-index: -2;
 	height: 100%;
   width: 100%;
+}
+
+.upload_btn{
+	background: #ffffff00;
+}
+
+.card_margin{
+	margin: 5% auto;
+
+}
+.image_margin{
+	margin-top: 5% auto;
 }
