@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var passportLocalMongoose = require("passport-local-mongoose");
 
-var PaintingSchema = new mongoose.Schema({
+var Paintings = new mongoose.Schema({
     pname : String,
     pdesc : String,
     partist : String,
@@ -9,4 +9,8 @@ var PaintingSchema = new mongoose.Schema({
     ptype : String,
     pcost : String,
     psize : String,
+    pimage: String
 });
+var PaintingShema = new mongoose.Schema(Paintings);
+
+module.exports = mongoose.model("PaintingDetail",PaintingShema);

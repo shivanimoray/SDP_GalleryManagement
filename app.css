@@ -29,3 +29,8 @@
 .image_margin{
 	margin-top: 5% auto;
 }
+
+.card_catalogue {
+	padding: 20px 20px 0 20px;
+	margin-bottom: 10px;
+}

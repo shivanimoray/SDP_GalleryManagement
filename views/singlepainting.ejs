@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Artefact - Valuing ART</title>
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
-		<link rel="stylesheet" type="text/css" href="/app.css">
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
-		<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
-    </head>
-    <body>
-          
+<% include partials/header %>
+<% include partials/navbar %>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
@@ -18,10 +8,10 @@
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-10" src="111.jpg" 
-                                            onerror="this.src='https://via.placeholder.com/450;'"
+                                            <img class="d-block w-10" src="<%= paintings.pimage %>" onerror="this.src='https://via.placeholder.com/450;'"
                                             alt="First slide">
-                                        </div>
+                                       </div>
+                                            
                                     </div>
                                 </div>
                             </div>
@@ -36,44 +26,45 @@
                                     <tr>
                                         <th scope="row">Painting Name</th>
                                             <td>
-                                                Pname
+                                                <%= paintings.pname %>
                                             </td>
                                     </tr> 
-                                    <tr>
+                                    
+                                    <tr> 
                                         <th scope="row">Description</th>
                                             <td>
-                                                Acrylic, Oil on Canvas
+                                                <%= paintings.pdesc %>
                                             </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Artist Name</th>
                                             <td>
-                                                    Artist Name
+                                                <%= paintings.pname %>
                                             </td>
                                     </tr>    
                                     
                                     <tr>
                                         <th scope="row">Painting Year</th>
                                         <td>
-                                            Painted Year
+                                            <%= paintings.pyear %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Painting Type</th>
                                         <td>
-                                                Painting Type
+                                            <%= paintings.ptype %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Cost</th>
                                         <td>
-                                            1200$
+                                            <%= paintings.pcost %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Size</th>
                                         <td>
-                                            70x30
+                                            <%= paintings.psize %>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -124,5 +115,4 @@
             </div>  
         </div>      
         
-    </body>
-</html>
+<% include partials/footer %>
