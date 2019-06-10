@@ -6,10 +6,10 @@
 	<% paintings.forEach(function(painting) { %>
 	<div class="col-md-3 col-xs-12 each_card" style="margin-top: 55px">
 		<div class="card">
-			<img class="card-img-top" src="<%= painting.pimage %>" onerror="this.src='https://via.placeholder.com/450';" alt="Card image cap">
+			<img class="card-img-top" src="<%= painting.paintimage %>" onerror="this.src='https://via.placeholder.com/450';" alt="Card image cap">
 			<div class="card-body">
 			
-            <a href="/singlepainting/<%= painting._id %>" class="btn btn-primary">By <%= painting.pname %></a>
+            <a href="/singlepainting/<%= painting._id %>" class="btn btn-primary">By <%= painting.paintname %></a>
 
 			</div>
 		</div>

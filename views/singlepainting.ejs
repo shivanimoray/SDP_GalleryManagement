@@ -3,12 +3,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                        <div class="card">
+                        <div class="card" style="margin-top: 105px">
                             <div class="card-body">
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-10" src="<%= paintings.pimage %>" onerror="this.src='https://via.placeholder.com/450;'"
+                                            <img class="d-block w-10" src="<%= paintings.paintimage %>" onerror="this.src='https://via.placeholder.com/450;'"
                                             alt="First slide">
                                        </div>
                                             
@@ -18,101 +18,59 @@
                         </div>
 	            </div>
 	            <div class="col align-self-center">
-                    <div class="card">
+                    <div class="card" style="margin-top: 105px">
                         <div class="card-body">
-                        
                             <table class="table">
                                 <tbody>
                                     <tr>
                                         <th scope="row">Painting Name</th>
                                             <td>
-                                                <%= paintings.pname %>
+                                                <%= paintings.paintname %>
                                             </td>
                                     </tr> 
                                     
                                     <tr> 
                                         <th scope="row">Description</th>
                                             <td>
-                                                <%= paintings.pdesc %>
+                                                <%= paintings.paintdesc %>
                                             </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Artist Name</th>
                                             <td>
-                                                <%= paintings.pname %>
+                                                <%= paintings.paintartist.afname %>
                                             </td>
                                     </tr>    
                                     
                                     <tr>
                                         <th scope="row">Painting Year</th>
                                         <td>
-                                            <%= paintings.pyear %>
+                                            <%= paintings.paintyear %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Painting Type</th>
                                         <td>
-                                            <%= paintings.ptype %>
+                                            <%= paintings.painttype %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Cost</th>
                                         <td>
-                                            <%= paintings.pcost %>
+                                            <%= paintings.paintcost %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Size</th>
                                         <td>
-                                            <%= paintings.psize %>
+                                            <%= paintings.paintsize %>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <a class="btn btn-secondary btn-block btn-raised profile-align" data-toggle="modal" data-target="#contactArtist">Buy Now</a>
                         </div>
                     
-                    <a class="btn btn-secondary btn-raised profile-align" data-toggle="modal" data-target="#contactArtist">Buy Now</a>
-                    <div class="modal fade" id="contactArtist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				        <div class="modal-dialog" role="document">
-					        <div class="modal-content">
-						        <div class="modal-header">
-							        <h5 class="modal-title" id="exampleModalLabel" >
-                                        Fill in the details, we will get back to you !!								
-							        </h5>
-							        <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
-								    <span aria-hidden="true">&times;</span>
-							        </button>
-						        </div>
-						        <div class="modal-body">
-							        <form action="/contact/" method="POST">
-								    <div class="form-group">
-									<label for="exampleInputEmail1">Email address</label>
-									<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
-									 placeholder="Enter email" />
-									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-								    </div>
-								    <div class="form-group">
-									<label for="exampleInputEmail1">Firstname</label>
-									<input type="text" class="form-control" id="exampleInputEmail1" name="firstname" aria-describedby="emailHelp"
-									 placeholder="Enter Firstname" />
-								    </div>
-								    <div class="form-group">
-									<label for="exampleInputEmail1">Lastname</label>
-									<input type="text" class="form-control" id="exampleInputEmail1" name="lastname" aria-describedby="emailHelp"
-									 placeholder="Enter Lastname" />
-								    </div>
-								    <div class="form-group">
-									<label for="exampleFormControlTextarea1">Message</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" placeholder="Type message"></textarea>
-								    </div>
-								    <button type="Submit" class="btn btn-primary btn-raised">Send</button>
-							        </form>
-						        </div>
-					        </div>
-				        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>      
-        
+                    
+                    
 <% include partials/footer %>

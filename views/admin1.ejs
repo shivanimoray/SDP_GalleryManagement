@@ -1,0 +1,248 @@
+<% include partials/header %>
+<% include partials/navbar1 %>
+
+<div class="accordion" id="accordionExample" style="margin-top: 85px">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="text_allign">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Upload
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="row jumbotron jumbotron-fluid" style="margin-top : 70px">
+
+                <div class="col-sm-6">
+
+                    <a class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#uploadPainting">Upload
+                        Painting</a>
+
+                    <div class="modal fade" id="uploadPainting" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Fill in the details to upload painting !!
+                                    </h5>
+                                    <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <form action="/upload_painting/" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="exampleInputPname">Panting Name</label>
+                                            <input type="text" class="form-control" name="pname"
+                                                placeholder="Enter painting name" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Panting Descripton</label>
+                                            <input type="text" class="form-control" name="pdesc"
+                                                placeholder="Describe the artwork" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Artist First Name</label>
+                                            <input type="text" class="form-control"  name="pafname"
+                                                placeholder="Artist Name" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Artist Last Name</label>
+                                            <input type="text" class="form-control"  name="palname"
+                                                placeholder="Artist Name" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Artist Email</label>
+                                            <input type="text" class="form-control"  name="paemail"
+                                                placeholder="Artist Name" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Artist Contact</label>
+                                            <input type="text" class="form-control"  name="pacontact"
+                                                placeholder="Artist Name" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Painted Year</label>
+                                            <input type="text" class="form-control" name="pyear" placeholder="Painted Year" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Type of painting</label>
+                                            <select class="form-control" name="ptype" id="exampleFormControlSelect1">
+                                                <option>Landscape</option>
+                                                <option>Portrait</option>
+                                                <option>Abstract</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Buying Price</label>
+                                            <input type="text" class="form-control" name="pbcost" placeholder="Cost" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Selling Price</label>
+                                            <input type="text" class="form-control" name="pscost" placeholder="Cost" />
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPdesc">Size of painting</label>
+                                            <input type="text" class="form-control" name="psize" placeholder="Size" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Upload Painting</label>
+                                            <input type="file" class="form-control" accept="image/x-png,image/gif,image/jpeg" name="pimage">
+                                        </div>
+
+                                        <button type="Submit" class="btn btn-primary btn-raised">Upload</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+
+                    <a class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#contactArtist">Upload
+                        Events</a>
+
+                    <div class="modal fade" id="contactArtist" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Fill in the details to upload Events !!
+                                    </h5>
+                                    <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <form action="/contact/" method="POST">
+                                        <div class="form-group">
+                                            <label for="exampleInputEventName">Event Name</label>
+                                            <input type="ename" class="form-control" id="exampleInputEventName"
+                                                name="ename" placeholder="Enter name of the event" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEventDescription">Event Description</label>
+                                            <input type="edesc" class="form-control" id="exampleInputEventDescription"
+                                                name="edesc" placeholder="Describe Event" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEventDate">Event Date</label>
+                                            <input type="edate" class="form-control" id="exampleInputEventDate"
+                                                name="edate" placeholder="Event Date" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEventLocation">Event Location</label>
+                                            <input type="elocation" class="form-control" id="exampleInputEventLocation"
+                                                name="elocation" placeholder="Event Location" />
+                                        </div>
+
+                                        <button type="Submit" class="btn btn-primary btn-raised">Upload</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="text_allign">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    Sold Painting
+                </button>
+
+            </h2>
+        </div>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-columns" style="margin-left: 12px; margin-right: 12px; margin-top: 14px;">
+                <% paintings.forEach(function(painting) { %>
+                <div class="card">
+                    <img src="<%= painting.pimage %>" class="card-img-top" alt="2.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Sold Out</h3>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Painting Name</th>
+                                    <td>
+                                        <%= painting.pname %>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Artist Name</th>
+                                    <td>
+                                        <%= painting.partist %>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Bought Price</th>
+                                    <td>
+                                        <%= painting.pbuyprice %> Euros
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Sold Price</th>
+                                    <td>
+                                        <%= painting.pcost %> Euros
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Return on investment</th>
+                                    <td>
+                                        <%= painting.pcost -  painting.pbuyprice %> Euros
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <% }); %>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

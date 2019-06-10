@@ -1,16 +1,25 @@
 <% include partials/header %>
 <% include partials/navbar %>
 
-<h6 class="display-3 text-center" style="margin: 0px 10px 20px;padding: 100px;">
-    <span style="text-decoration: underline;">EVENTS</span> 
-</h6>
-<label class="text-monospace text-center" style="width: 1490px;padding: 10px;height: 100px;">Label</label>
+<div>
 
-<label class="text-monospace text-center" style="width: 1490px;padding: 10px;height: 100px;">Label</label>
-    <label
-        class="text-monospace text-center" style="width: 1490px;padding: 10px;height: 100px;">Label</label><label class="text-monospace text-center" style="width: 1490px;padding: 10px;height: 100px;">Label</label>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <h1 class="card_margin text_allign">Upcoming EVENTS</h1>
+   <% events.forEach(function(event) { %> 
+     <div class="card container card_margin" >
+        <div class="card-body">
+             <h5 class="card-title"><%= event.eventname %></h5> 
+                <p class="card-text"><%= event.eventdescription %></p> 
+                    <p class="card-text">Contact:<%= event.eventstaff.sfname + event.eventstaff.slname %></p>
+                    <p class="card-text"><%= event.eventstaff.semail %></p>
+                        <p class="card-text"><%= event.eventstaff.scontactnum %></p>
+                        
+                        <!-- write if condition, to display delete icon only in admin page -->
+                        <!-- <button class="delete_btn"><i class="fa fa-trash"></i></button> -->
+                        
+                
+        </div>
+    </div>
+    <% }); %> 
 
-<% include partials/footer %>
-        
+</div> 
+<% include partials/footer %>     

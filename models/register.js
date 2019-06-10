@@ -1,11 +1,14 @@
 var mongoose = require("mongoose");
 var passportLocalMongoose = require("passport-local-mongoose");
 
-var RegisterSchema = new mongoose.Schema({
+var Registers = new mongoose.Schema({
     fname : String,
     lname : String,  
     username : String,
     password: String,
-    confirmpassword : String,
     type : String
 });
+
+var RegisterShema = new mongoose.Schema(Registers);
+
+module.exports = mongoose.model("RegisterDetail",RegisterShema);

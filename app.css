@@ -1,6 +1,7 @@
 .register_card {
 	float: none;
-  margin: 5% auto;
+	margin: 5% auto;
+	padding: 15px;
 }
 
 .login_card {
@@ -10,13 +11,6 @@
   box-shadow: none;
 }
 
-.bg_background{
-	background-image: url(BackgroungImage.jpg);
-	position: absolute;
-	z-index: -2;
-	height: 100%;
-  width: 100%;
-}
 
 .upload_btn{
 	background: #ffffff00;
@@ -33,4 +27,35 @@
 .card_catalogue {
 	padding: 20px 20px 0 20px;
 	margin-bottom: 10px;
+}
+
+.image_margin{
+  margin-top: 5% auto;
+}
+
+.text_allign{
+  text-align: center;
+}
+
+.Events_background{
+  background-image: url("https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg");
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+.delete_btn{
+  float: right;
+}
+
+.w-10 {
+	width: inherit;
+}
+
+.sign_up_cards, .sign_up_card{
+	margin: 10% auto;
+}
+
+.scrollable_card {
+	padding : 0;
 }
