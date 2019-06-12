@@ -1,0 +1,60 @@
+<% include partials/header %>
+<% include partials/navbar1 %>
+
+<div>
+
+    <h1 class="card_margin text_allign">Edit Artist Profile</h1>
+    <% artists.forEach(function(artist) { %>
+    <div class="card container card_margin">
+        <div class="card-body">
+            <h5 class="card-title"><%= artist.afname + artist.alastname %></h5>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#<%= artist.aemail %>">Edit Profile</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="<%= artist.aemail %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/admin/artists/<%= artist._id %>" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit for <%= artist.afname %></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputFirstName">First Name</label>
+                            <input type="text" class="form-control" id="exampleInputFirstName" name="afirstname"
+                                value="<%= artist.afname %>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFirstName">Last Name</label>
+                            <input type="text" class="form-control" id="exampleInputFirstName" name="alname"
+                                value="<%= artist.alastname %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputLastName">Email</label>
+                            <input type="text" class="form-control" id="exampleInputLastName" name="amail"
+                                value="<%= artist.aemail %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputContactNum">Contact Number</label>
+                            <input type="text" class="form-control" id="exampleInputContactNum" name="acontact" 
+                                value="<%= artist.acontactnum %>"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button class="btn btn-primary"></a>Save Details</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <% }); %>
+
+</div>
+
+<% include partials/footer %>

@@ -5,8 +5,7 @@ var Registers = new mongoose.Schema({
     fname : String,
     lname : String,  
     username : String,
-    password: String,
-    type : String
+    password: String
 });
 
 var RegisterShema = new mongoose.Schema(Registers);

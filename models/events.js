@@ -5,7 +5,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var Events = new mongoose.Schema({
     eventname : String,
     eventdescription: String,
-    eventdate : Date,
+    eventdate : String,
     eventlocation : String,
     eventstaff: 
     {

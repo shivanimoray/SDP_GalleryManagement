@@ -51,35 +51,36 @@
 
                                         <div class="form-group">
                                             <label for="exampleInputPdesc">Artist First Name</label>
-                                            <input type="text" class="form-control"  name="pafname"
+                                            <input type="text" class="form-control" name="pafname"
                                                 placeholder="Artist Name" />
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputPdesc">Artist Last Name</label>
-                                            <input type="text" class="form-control"  name="palname"
+                                            <input type="text" class="form-control" name="palname"
                                                 placeholder="Artist Name" />
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputPdesc">Artist Email</label>
-                                            <input type="text" class="form-control"  name="paemail"
+                                            <input type="text" class="form-control" name="paemail"
                                                 placeholder="Artist Name" />
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputPdesc">Artist Contact</label>
-                                            <input type="text" class="form-control"  name="pacontact"
+                                            <input type="text" class="form-control" name="pacontact"
                                                 placeholder="Artist Name" />
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputPdesc">Painted Year</label>
-                                            <input type="text" class="form-control" name="pyear" placeholder="Painted Year" />
+                                            <input type="text" class="form-control" name="pyear"
+                                                placeholder="Painted Year" />
 
                                         </div>
 
@@ -110,7 +111,8 @@
 
                                         <div class="form-group">
                                             <label for="exampleFormControlFile1">Upload Painting</label>
-                                            <input type="file" class="form-control" accept="image/x-png,image/gif,image/jpeg" name="pimage">
+                                            <input type="file" class="form-control"
+                                                accept="image/x-png,image/gif,image/jpeg" name="pimage">
                                         </div>
 
                                         <button type="Submit" class="btn btn-primary btn-raised">Upload</button>
@@ -140,32 +142,57 @@
                                 </div>
 
                                 <div class="modal-body">
-                                    <form action="/contact/" method="POST">
+                                    <form action="/upload_event/" method="POST">
                                         <div class="form-group">
                                             <label for="exampleInputEventName">Event Name</label>
-                                            <input type="ename" class="form-control" id="exampleInputEventName"
+                                            <input type="text" class="form-control" id="exampleInputEventName"
                                                 name="ename" placeholder="Enter name of the event" />
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEventDescription">Event Description</label>
-                                            <input type="edesc" class="form-control" id="exampleInputEventDescription"
+                                            <input type="text" class="form-control" id="exampleInputEventDescription"
                                                 name="edesc" placeholder="Describe Event" />
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEventDate">Event Date</label>
-                                            <input type="edate" class="form-control" id="exampleInputEventDate"
+                                            <input type="text" class="form-control" id="exampleInputEventDate"
                                                 name="edate" placeholder="Event Date" />
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEventLocation">Event Location</label>
-                                            <input type="elocation" class="form-control" id="exampleInputEventLocation"
+                                            <input type="text" class="form-control" id="exampleInputEventLocation"
                                                 name="elocation" placeholder="Event Location" />
                                         </div>
 
-                                        <button type="Submit" class="btn btn-primary btn-raised">Upload</button>
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            Staff Contact Details
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEventLocation"> First Name</label>
+                                                <input type="text" class="form-control" id="exampleInputEventLocation"
+                                                    name="esfname" placeholder="Staff First Name" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEventLocation"> Last Name</label>
+                                                <input type="text" class="form-control" id="exampleInputEventLocation"
+                                                    name="eslname" placeholder="Staff Last Name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEventLocation"> Email</label>
+                                                <input type="text" class="form-control" id="exampleInputEventLocation"
+                                                    name="esemail" placeholder="Staff Email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEventLocation"> Contact Number</label>
+                                                <input type="text" class="form-control" id="exampleInputEventLocation"
+                                                    name="escontact" placeholder="Contact Number" />
+                                            </div>
+
+                                            <button type="Submit" class="btn btn-primary btn-raised">Upload</button>
                                     </form>
                                 </div>
                             </div>
@@ -242,7 +269,80 @@
 
             </div>
         </div>
+
+
     </div>
 </div>
+
+<div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="text_allign">
+              <a href="/artists"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="true" aria-controls="collapseFive">
+                Edit Artist Details
+              </button></a>
+            </h2>
+          </div>
+    
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+    
+            <div class="card card-columns text_allign"
+              style="margin-left: 642px; margin-right: 12px; margin-top: 14px; width: 20%;">
+              
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Artist by Email" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
+              </form>
+              <a class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#editArtist"></a>
+    
+              <div class="modal fade" id="editArtist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Update Artist Details !
+                      </h5>
+                      <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+    
+                    <div class="modal-body">
+                      <form action="/contact/" method="POST">
+                        <div class="form-group">
+                          <label for="exampleInputFirstName">First Name</label>
+                          <input type="text" class="form-control" id="exampleInputFirstName" name="fname"
+                            placeholder="" />
+                        </div>
+    
+                        <div class="form-group">
+                          <label for="exampleInputLastName">Last Name</label>
+                          <input type="text" class="form-control" id="exampleInputLastName" name="lname"
+                            placeholder="fetch from db" />
+                        </div>
+    
+                        <div class="form-group">
+                          <label for="exampleInputMailId">Mail Id</label>
+                          <input type="partist" class="form-control" id="exampleInputMailId" name="mailid"
+                            placeholder="fetch from db" />
+                        </div>
+    
+                        <button type="Submit" class="btn btn-primary btn-raised">Update</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+
 
 <% include partials/footer %>

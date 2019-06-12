@@ -68,8 +68,56 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="btn btn-secondary btn-block btn-raised profile-align" data-toggle="modal" data-target="#contactArtist">Buy Now</a>
+                            <a class="btn btn-secondary btn-raised profile-align" data-toggle="modal" data-target="#contactArtist">Buy Now</a>
+                    <div class="modal fade" id="contactArtist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				        <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+						        <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLabel" >
+                                        Enter your Bank Details!								
+							        </h5>
+							        <button type="Submit" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+							        </button>
+						        </div>
+						        <div class="modal-body">
+							        <form action="/payment/" method="POST">
+								    <div class="form-group">
+									<label for="exampleInputIban1">IBAN</label>
+									<input type="iban" class="form-control" id="exampleInputIban1" name="piban" aria-describedby="ibanHelp"
+									 placeholder="Enter IBAN" />
+									<small id="ibanHelp" class="form-text text-muted">We'll never share your IBAN with anyone else.</small>
+								    </div>
+								    <div class="form-group">
+									<label for="exampleInputBic1">BIC</label>
+									<input type="text" class="form-control" id="exampleInputBic1" name="pbic" aria-describedby="bicHelp"
+									 placeholder="Enter BIC" />
+								    </div>
+								    <div class="form-group">
+									<label for="exampleInputAddress1">Shipping Address</label>
+									                                     
+                                    
+									<input type="text" class="form-control" id="exampleInputStreetAddress1" name="add1" aria-describedby="streetaddressHelp"
+                                     placeholder="Enter Address1" />
+                                     
+                                     <label for="exampleInputCity1">City</label>
+									<input type="text" class="form-control" id="exampleInputCity1" name="add2" aria-describedby="cityHelp"
+                                     placeholder="Enter Address2" />
+                                     
+                                    
+                                     <label for="exampleInputPin1">Postcode</label>
+									<input type="text" class="form-control" id="exampleInputPostcode1" name="pcode" aria-describedby="postcodeHelp"
+									 placeholder="Enter Postcode" />
+								    </div>
+								    
+								    <button type="Submit" class="btn btn-primary btn-raised">Make Payment</button>
+							        </form>
+						        </div>
+                            </div>
                         </div>
+                    </div>
+
+				        
                     
                     
                     
